@@ -12,7 +12,7 @@ const imgStyle = {
 }
 
 export default function ImageLazyLoaded({ image }) {
-    const { loaded } = useIntersectionObserver();
+    const { ref, loaded } = useIntersectionObserver();
 
     return (
         <div ref={ref} style={cellStyle}>

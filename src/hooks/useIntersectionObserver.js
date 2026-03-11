@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 export default function useIntersectionObserver() {
     const [loaded, setLoaded] = useState(false);
     const ref = useRef(null);
@@ -27,5 +29,5 @@ export default function useIntersectionObserver() {
         };
     }, []);
 
-    return { loaded };
+    return { ref, loaded };
 }
