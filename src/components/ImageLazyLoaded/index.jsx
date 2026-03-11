@@ -16,7 +16,7 @@ export default function ImageLazyLoaded({ image }) {
 
     return (
         <div ref={ref} style={cellStyle}>
-            {loaded && <img src={image} alt={image} style={imgStyle} />}
+            {<img src={loaded ? image : ''} alt={image} style={imgStyle} />}
         </div>
     );
 }
